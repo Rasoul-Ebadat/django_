@@ -5,5 +5,25 @@ from . import models
 
 @admin.register(models.Karshenas)
 class KarshenasAdmin(admin.ModelAdmin):
-    #fields=[('karshenas_id'),('karshenas_title')]
     fields=[('karshenas_id','karshenas_title')]
+
+@admin.register(models.Madion)
+class MadionAdmin(admin.ModelAdmin):
+    fieldsets = (
+        ('اطلاعات مدیون' ,{'fields':('madion_id','madion_name','madion_compani')}),
+        ('اطلاعات ضامن'  ,{'fields':('madion_zamen1','madion_zamen2','madion_zamen3')}),
+        ('اطلاعات شعب'   ,{'fields':('shobe_name','modiriat_name')}),
+        ('اطلاعات قرارداد',{'fields':('noe_madion','karshenas_name')}),
+        ('اطلاعات اجرایی',{'fields':('kelase_asli','kelase_niabati')}),
+        ('تاریخ ارجاع و عودت',{'fields':('date_erjae','odat_banck')}),
+
+    )
+
+@admin.register(models.Shobe)
+class ShobeAdmin(admin.ModelAdmin):
+    fields=[('shobe_id','shobe_title','modiriat')]
+
+
+@admin.register(models.Modiriat)
+class ModiriatAdmin(admin.ModelAdmin):
+    fields=[('modiriat_id','modiriat_title')]
