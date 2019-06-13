@@ -25,7 +25,7 @@ class Madion(models.Model):
 
 
     def __str__(self):
-        return '%s,%s'%(self.madion_name)
+        return '%s'%(self.madion_name)
 
 
 
@@ -37,14 +37,14 @@ class Shobe (models.Model):
 
 
     def __str__(self):
-        return '%s,%s'%(self.shobe_title)
+        return '%s'%(self.shobe_title)
 
 
 class Karshenas (models.Model):
       karshenas_title=models.CharField(max_length=200)
       karshenas_id  =models.UUIDField(primary_key = True,default=uuid.uuid4,help_text = 'Unique Id for this particular Karshenas' )
       def __str__(self):
-         return '%s,%s'%(self.karshenas_title)
+         return '%s'%(self.karshenas_title)
 
 
 
@@ -53,4 +53,4 @@ class Modiriat (models.Model):
       modiriat_id = models.UUIDField(primary_key=True,default=uuid.uuid4,help_text='Unique Id for this particular Modiriat')
 
       def __str__(self):
-         return '%s,%s'%(self.modiriat_title)
+         return '%s'%(self.modiriat_title)
