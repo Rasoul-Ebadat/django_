@@ -31,6 +31,8 @@ class Madion(models.Model):
     def get_absolute_url(self):
         return reverse('Madion_detail',args=[str(self.madion_id)])
 
+    #madion_name.short_description = 'نام مدیون'
+
 
 class Shobe (models.Model):
 
