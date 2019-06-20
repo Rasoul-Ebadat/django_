@@ -1,0 +1,19 @@
+{% extends "app/base_generic.html" %}
+
+{% block content %}
+  <h1> لیست مدیون</h1>
+  {% if madion_list %}
+  <ul>
+    {% for Madion in madion_list %}
+    <li>
+      <a href="{{Madion.get_absolute_url}}">{{Madion.madion_name}}</a>
+    {% endfor%}
+
+  </ul>
+
+
+  {% else %}
+    <p> هیچ اطلاعاتی ثبت نشده است </p>
+  {% endif %}
+
+{% endblock %}

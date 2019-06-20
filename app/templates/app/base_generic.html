@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% block title %} <title> Lpcal libri </title>{%endblock%}
+    {% block title %} <title> صفحه اصلی </title>{%endblock%}
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device.width , initial.scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.main.css">
+    <meta name="viewport" content="width=device-width , initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="text/javascript"></script>
     <script src="text/python"></script>
     {% load static %}
@@ -18,10 +18,12 @@
           {%block sidebar%}
           <ul class="sidebar-nav">
             <li><a href="{% url 'app:index' %}">صفحه اصلی</a></li>
-            <li><a href="">مدیون</a></li>
+            <li><a href="{% url 'app:madion' %}">مدیون</a></li>
             <li><a href="">کارشناس</a></li>
             <li><a href="">مدیریت شعب</a></li>
             <li><a href="">شعب</a></li>
+            <li><a href="/admin/">مدیر پروژه</a></li>
+
 
           </ul>
           {%endblock%}

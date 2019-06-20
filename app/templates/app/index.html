@@ -1,14 +1,19 @@
 {% extends "app/base_generic.html" %}
 
 {% block content %}
-<h1> سیستم مطالبات معوق </h1>
-  <p> به سیستم <em> مطالبات معوق </em> , خوش آمدین  </p>
-<h2> Dynamice Content  </h2>
-  <p> The libri have Following record cont </p>
+
+
+<h1> اتوماسیون مطالبات معوق</h1>
+  <p> به سیستم <em> مطالبات معوق </em>  خوش آمدین  </p>
+
+  <p> تعداد اطلاعات موجود به شرح ذیل : </p>
   <ul>
-    <li><strong>numebrOfmadion :</strong>{{numebrOfmadion}}</li>
-    <li><strong>numebrOfKarshenas :</strong>{{numebrOfKarshenas}}</li>
-    <li><strong>numebrOfModiriat :</strong>{{numebrOfModiriat}}</li>
-    <li><strong>numebrOfShobe :</strong>{{numebrOfShobe}}</li>
+    <li><strong>تعداد مدیون :</strong>{{numebrOfmadion}}</li>
+    <li><strong>تعداد کارشناس :</strong>{{numebrOfKarshenas}}</li>
+    <li><strong>تعداد مدیریت :</strong>{{numebrOfModiriat}}</li>
+    <li><strong>تعداد شعب :</strong>{{numebrOfShobe}}</li>
   </ul>
+
+
+
 {% endblock %}
