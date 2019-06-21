@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en" >
+  <head >
     {% block title %} <title> صفحه اصلی </title>{%endblock%}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width , initial-scale=1">
@@ -10,25 +10,25 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'app/styles.css' %}">
   </head>
-  <body>
-    <div class="container-fluid">
+  <body >
+    <div class="container-fluid"  >
       <div class="row">
-        <div class="col-sm-2">
+        <div class="col-sm-2" >
 
           {%block sidebar%}
-          <ul class="sidebar-nav">
+          <ul class="sidebar-nav" >
             <li><a href="{% url 'app:index' %}">صفحه اصلی</a></li>
             <li><a href="{% url 'app:madion' %}">مدیون</a></li>
-            <li><a href="">کارشناس</a></li>
-            <li><a href="">مدیریت شعب</a></li>
-            <li><a href="">شعب</a></li>
+            <li><a href="{% url 'app:karshenas' %}">کارشناس</a></li>
+            <li><a href="{% url 'app:modiriat' %}">مدیریت شعب</a></li>
+            <li><a href="{% url 'app:shobe' %}">شعب</a></li>
             <li><a href="/admin/">مدیر پروژه</a></li>
 
 
           </ul>
           {%endblock%}
         </div>
-        <div class="col-sm-10">
+        <div class="col-sm-10" >
           {%block content%}{%endblock%}
         </div>
 

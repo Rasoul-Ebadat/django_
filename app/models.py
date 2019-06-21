@@ -32,10 +32,6 @@ class Madion(models.Model):
         return reverse('app:madion-detail',args=[str(self.madion_id)])
 
 
-
-
-
-
 class Shobe (models.Model):
 
     shobe_id = models.UUIDField(primary_key = True,default=uuid.uuid4,help_text = 'Unique Id for this particular Shobe' )
@@ -46,12 +42,20 @@ class Shobe (models.Model):
     def __str__(self):
         return '%s'%(self.shobe_title)
 
+    def get_absolute_url(self):
+       return reverse('app:shobe-detail',args=[str(self.shobe_id)])
+
+
 
 class Karshenas (models.Model):
       karshenas_title=models.CharField(max_length=200)
       karshenas_id  =models.UUIDField(primary_key = True,default=uuid.uuid4,help_text = 'Unique Id for this particular Karshenas' )
+
       def __str__(self):
          return '%s'%(self.karshenas_title)
+
+      def get_absolute_url(self):
+         return reverse('app:karshenas-detail',args=[str(self.karshenas_id)])
 
 
 
@@ -61,3 +65,6 @@ class Modiriat (models.Model):
 
       def __str__(self):
          return '%s'%(self.modiriat_title)
+
+      def get_absolute_url(self):
+         return reverse('app:modiriat-detail',args=[str(self.modiriat_id)])

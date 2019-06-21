@@ -19,18 +19,34 @@ class MadionListView(generic.ListView):
     model = models.Madion
     template_name = 'app/madion_list.html'
 
-class MadionDetailView(generic.DeleteView):
+class MadionDetailView(generic.DetailView):
     model=models.Madion
     template_name = 'app/madion_detail.html'
 
-#def index(request):
-#    numebrOfmadion = models.Madion.objects.all().count()
-#    numebrOfKarshenas = models.Karshenas.objects.all().count()
-#    numebrOfModiriat = models.Modiriat.objects.all().count()
-#    numebrOfShobe = models.Shobe.objects.all().count()
+class KarshenasListView(generic.ListView):
+    model = models.Karshenas
+    template_name = 'app/karshenas_list.html'
+
+class KarshenasDetailView(generic.DetailView):
+    model=models.Karshenas
+    template_name = 'app/karshenas_detail.html'
 
 
-#    return render(
-#        request,
-#        'app/index.html',
-#        context={'numebrOfmadion': numebrOfmadion,'numebrOfKarshenas': numebrOfKarshenas,'numebrOfModiriat': numebrOfModiriat,'numebrOfShobe': numebrOfShobe})
+
+class ShobeListView(generic.ListView):
+    model = models.Shobe
+    template_name = 'app/shobe_list.html'
+
+class ShobeDetailView(generic.DetailView):
+    model=models.Shobe
+    template_name = 'app/shobe_detail.html'
+
+
+
+class ModiriatListView(generic.ListView):
+    model = models.Modiriat
+    template_name = 'app/modiriat_list.html'
+
+class ModiriatDetailView(generic.DetailView):
+    model=models.Modiriat
+    template_name = 'app/modiriat_detail.html'

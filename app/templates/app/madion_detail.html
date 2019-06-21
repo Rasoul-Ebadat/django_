@@ -2,26 +2,45 @@
 
 {% block content %}
 
-    <hl> title : {{Madion.madion_name}}</hl>
-    <p><strong>نام مدیون</strong><a href="">{{Madion.karshenas_name}}</a></p>
-    <p><strong>نام شرکت</strong>{{madion_compani}}</p>
-    <p><strong>ضامن 1</strong>{{madion_zamen1}}</p>
-    <p><strong>ضامن 2</strong>{{madion_zamen2}}</p>
-    <p><strong>ضامن 3</strong>{{madion_zamen3}}</p>
-    <p><strong>نوع قرارداد</strong>{{noe_madion}}</p>
-    <p><strong>مدیریت شعبه</strong>{{modiriat_name}}</p>
-    <p><strong>شعبه</strong>{{shobe_name}}</p>
-    <p><strong>نام کارشناس</strong>{{karshenas_name}}</p>
-    <p><strong>کلاسه اصلی</strong>{{kelase_asli}}</p>
-    <p><strong>کلاسه نیابتی</strong>{{kelase_niabati}}</p>
-    <p><strong>تاریخ ارجاع پرونده</strong>{{date_erjae}}</p>
-    <p><strong>تاریخ عودت پرونده</strong>{{odat_banck}}</p>
-
-    <div style="margin-left:20px;margin-top=20px">
-
-
-    </div>
-
+    <h3 style="text-align:center;" > اطلاعات پرونده</h3>
+      <ul>
+        <p style="text-align:right;" ><strong  style="color:red;">نام مدیون : </strong>{{madion.madion_name}}</p>
+        <p style="text-align:right;"><strong style="color:red;">نام شرکت :</strong>{{madion.madion_compani}}</p>
+      </ul>
     <hr>
-
+    <h3 style="text-align:center;">اطلاعات ضامن</h3>
+    <ul>
+      <p style="text-align:right;"><strong style="color:red;" >ضامن 1 :</strong>{{madion.madion_zamen1}}</p>
+      <p style="text-align:right;"><strong style="color:red;">ضامن 2 :</strong>{{madion.madion_zamen2}}</p>
+      <p style="text-align:right;"><strong style="color:red;">ضامن 3 :</strong>{{madion.madion_zamen3}}</p>
+    </ul>
+    <hr>
+    <h3 style="text-align:center;">اطلاعات کارشناس</h3>
+    <ul>
+        <p style="text-align:right;"><strong style="color:red;">نام کارشناس :</strong>{{madion.karshenas_name}}</p>
+    </ul>
+    <hr>
+    <h3 style="text-align:center;">اطلاعات قرارداد</h3>
+    <ul>
+      <p style="text-align:right;"><strong style="color:red;">نوع قرارداد :</strong>{{madion.noe_madion}}</p>
+    </ul>
+    <hr>
+    <h3 style="text-align:center;">اطلاعات شعب واگزاری</h3>
+    <ul>
+      <p style="text-align:right;"><strong style="color:red;">مدیریت شعبه :</strong>{{madion.modiriat_name}}</p>
+      <p style="text-align:right;"><strong style="color:red;">شعبه :</strong>{{madion.shobe_name}}</p>
+    </ul>
+    <hr>
+    <h3 style="text-align:center;">اطلاعات اجرایی</h3>
+    <ul>
+      <p style="text-align:right;"><strong style="color:red;">کلاسه اصلی :</strong>{{madion.kelase_asli}}</p>
+      <p style="text-align:right;"><strong style="color:red;">کلاسه نیابتی :</strong>{{madion.kelase_niabati}}</p>
+    </ul>
+    <hr>
+    <h3 style="text-align:center;">تاریخ ارجاع و عودت</h3>
+    <ul>
+      <p style="text-align:right;"><strong style="color:red;">تاریخ ارجاع پرونده:</strong>{{madion.date_erjae}}</p>
+      <p style="text-align:right;"><strong style="color:red;">تاریخ عودت پرونده :</strong>{{madion.odat_banck}}</p>
+    </ul>
+    <hr>
 {% endblock %}

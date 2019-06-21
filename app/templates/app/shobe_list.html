@@ -1,0 +1,19 @@
+{% extends "app/base_generic.html" %}
+
+{% block content %}
+  <h1>لیست شعب </h1>
+  {% if shobe_list %}
+  <ul>
+    {% for Shobe in shobe_list %}
+    <li>
+      <a href="{{Shobe.get_absolute_url}}">{{Shobe.shobe_title}}</a>
+    {% endfor%}
+
+  </ul>
+
+
+  {% else %}
+    <p> هیچ اطلاعاتی ثبت نشده است </p>
+  {% endif %}
+
+{% endblock %}
